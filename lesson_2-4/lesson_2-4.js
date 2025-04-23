@@ -42,10 +42,10 @@ const getTitle = function () {
 console.log(getTitle());
 
 const getServicePercentPrices = function () {
-  return fullPrice * percentage;
+  return fullPrice - fullPrice * percentage;
 };
 
-const servicePercentPrice = fullPrice - getServicePercentPrices();
+const servicePercentPrice = getServicePercentPrices();
 
 const getRollbackMessage = function () {
   if (fullPrice >= 50000) {
@@ -64,3 +64,4 @@ console.log(
   "стоимость проекта с учётом скидки подрядчику =",
   servicePercentPrice
 );
+getRollbackMessage();
